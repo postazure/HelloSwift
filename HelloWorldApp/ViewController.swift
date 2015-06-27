@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myTextField: UITextField!
 
+    @IBAction func myButton(sender: AnyObject) {
+        if (myTextField.text != ""){
+            myLabel.text = myTextField.text
+        } else {
+            myLabel.text = "Hello"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println("Hello World!")
+
     }
 
     override func didReceiveMemoryWarning() {
